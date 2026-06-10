@@ -1,0 +1,11 @@
+C:\NET\Movimientos\Movimientos.Domain\bin\Debug\net8.0\Movimientos.Domain.deps.json
+C:\NET\Movimientos\Movimientos.Domain\bin\Debug\net8.0\Movimientos.Domain.dll
+C:\NET\Movimientos\Movimientos.Domain\bin\Debug\net8.0\Movimientos.Domain.pdb
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\Movimientos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\Movimientos.Domain.AssemblyInfoInputs.cache
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\Movimientos.Domain.AssemblyInfo.cs
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\Movimientos.Domain.csproj.CoreCompileInputs.cache
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\Movimientos.Domain.dll
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\refint\Movimientos.Domain.dll
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\Movimientos.Domain.pdb
+C:\NET\Movimientos\Movimientos.Domain\obj\Debug\net8.0\ref\Movimientos.Domain.dll

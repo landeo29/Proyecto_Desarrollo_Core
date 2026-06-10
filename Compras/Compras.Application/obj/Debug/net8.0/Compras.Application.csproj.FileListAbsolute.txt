@@ -1,0 +1,17 @@
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Compras.Application.deps.json
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Compras.Application.dll
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Compras.Application.pdb
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Compras.Domain.dll
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Compras.Domain.pdb
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.csproj.AssemblyReference.cache
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.AssemblyInfoInputs.cache
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.AssemblyInfo.cs
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.csproj.CoreCompileInputs.cache
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras..5579D6AC.Up2Date
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.dll
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\refint\Compras.Application.dll
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\Compras.Application.pdb
+C:\NET\Compras\Compras.Application\obj\Debug\net8.0\ref\Compras.Application.dll
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Shared.Contracts.dll
+C:\NET\Compras\Compras.Application\bin\Debug\net8.0\Shared.Contracts.pdb
