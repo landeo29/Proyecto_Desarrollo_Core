@@ -25,3 +25,5 @@ public class CompraController : ControllerBase
     public async Task<IActionResult> Listar()
         => Ok(await _service.ListarAsync());
 }
+
+
