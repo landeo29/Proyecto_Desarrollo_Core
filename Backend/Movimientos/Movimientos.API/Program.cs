@@ -21,6 +21,7 @@ builder.Services.AddScoped<IMovimientoService, MovimientoService>();
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<CompraRegistradaConsumer>();
+    x.AddConsumer<VentaRegistradaConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -33,6 +34,11 @@ builder.Services.AddMassTransit(x =>
         cfg.ReceiveEndpoint("movimientos-compra-registrada", e =>
         {
             e.ConfigureConsumer<CompraRegistradaConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("movimientos-venta-registrada", e =>
+        {
+            e.ConfigureConsumer<VentaRegistradaConsumer>(context);
         });
     });
 });
