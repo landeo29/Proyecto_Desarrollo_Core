@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movimientos.Domain", "Movim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movimientos.Infrastructure", "Movimientos.Infrastructure\Movimientos.Infrastructure.csproj", "{8293D72E-9C21-4D2B-BCB8-89D31B9D4A19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Contracts", "..\Shared.Contracts\Shared.Contracts.csproj", "{004316D2-C65F-4FA6-A525-EAA9EB2DCF38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{8293D72E-9C21-4D2B-BCB8-89D31B9D4A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8293D72E-9C21-4D2B-BCB8-89D31B9D4A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8293D72E-9C21-4D2B-BCB8-89D31B9D4A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004316D2-C65F-4FA6-A525-EAA9EB2DCF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004316D2-C65F-4FA6-A525-EAA9EB2DCF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004316D2-C65F-4FA6-A525-EAA9EB2DCF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004316D2-C65F-4FA6-A525-EAA9EB2DCF38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

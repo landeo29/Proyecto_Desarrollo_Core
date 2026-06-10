@@ -1,8 +1,10 @@
 using System.Text;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Movimientos.Application.Consumers;
 using Movimientos.Application.Interfaces;
 using Movimientos.Application.Services;
 using Movimientos.Infrastructure.Persistence;
@@ -15,6 +17,25 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IMovimientoRepository, MovimientoRepository>();
 builder.Services.AddScoped<IMovimientoService, MovimientoService>();
+
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<CompraRegistradaConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+        cfg.ReceiveEndpoint("movimientos-compra-registrada", e =>
+        {
+            e.ConfigureConsumer<CompraRegistradaConsumer>(context);
+        });
+    });
+});
 
 var jwt = builder.Configuration.GetSection("Jwt");
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

@@ -37,3 +37,5 @@ C:\NET\Backend\Movimientos\Movimientos.Infrastructure\obj\Debug\net8.0\refint\Mo
 C:\NET\Backend\Movimientos\Movimientos.Infrastructure\obj\Debug\net8.0\Movimientos.Infrastructure.pdb
 C:\NET\Backend\Movimientos\Movimientos.Infrastructure\obj\Debug\net8.0\Movimientos.Infrastructure.genruntimeconfig.cache
 C:\NET\Backend\Movimientos\Movimientos.Infrastructure\obj\Debug\net8.0\ref\Movimientos.Infrastructure.dll
+C:\NET\Backend\Movimientos\Movimientos.Infrastructure\bin\Debug\net8.0\Shared.Contracts.dll
+C:\NET\Backend\Movimientos\Movimientos.Infrastructure\bin\Debug\net8.0\Shared.Contracts.pdb

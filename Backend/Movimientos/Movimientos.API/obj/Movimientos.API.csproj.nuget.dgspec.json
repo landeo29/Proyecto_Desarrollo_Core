@@ -33,6 +33,9 @@
               },
               "C:\\NET\\Backend\\Movimientos\\Movimientos.Infrastructure\\Movimientos.Infrastructure.csproj": {
                 "projectPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Infrastructure\\Movimientos.Infrastructure.csproj"
+              },
+              "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj": {
+                "projectPath": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj"
               }
             }
           }
@@ -52,6 +55,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.11, )"
@@ -124,6 +131,9 @@
             "projectReferences": {
               "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj": {
                 "projectPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj"
+              },
+              "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj": {
+                "projectPath": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj"
               }
             }
           }
@@ -142,6 +152,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -281,6 +297,66 @@
               "version": "[8.0.11, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.422/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj",
+        "projectName": "Shared.Contracts",
+        "projectPath": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj",
+        "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
+        "outputPath": "C:\\NET\\Backend\\Shared.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",

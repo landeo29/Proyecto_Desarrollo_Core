@@ -301,3 +301,9 @@ C:\NET\Backend\Movimientos\Movimientos.API\obj\Debug\net8.0\refint\Movimientos.A
 C:\NET\Backend\Movimientos\Movimientos.API\obj\Debug\net8.0\Movimientos.API.pdb
 C:\NET\Backend\Movimientos\Movimientos.API\obj\Debug\net8.0\Movimientos.API.genruntimeconfig.cache
 C:\NET\Backend\Movimientos\Movimientos.API\obj\Debug\net8.0\ref\Movimientos.API.dll
+C:\NET\Backend\Movimientos\Movimientos.API\bin\Debug\net8.0\MassTransit.dll
+C:\NET\Backend\Movimientos\Movimientos.API\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\NET\Backend\Movimientos\Movimientos.API\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\NET\Backend\Movimientos\Movimientos.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\NET\Backend\Movimientos\Movimientos.API\bin\Debug\net8.0\Shared.Contracts.dll
+C:\NET\Backend\Movimientos\Movimientos.API\bin\Debug\net8.0\Shared.Contracts.pdb

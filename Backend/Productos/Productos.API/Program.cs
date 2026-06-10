@@ -85,7 +85,10 @@ builder.Services.AddMassTransit(x =>
             h.Username("guest");
             h.Password("guest");
         });
-        cfg.ConfigureEndpoints(context);
+        cfg.ReceiveEndpoint("productos-compra-registrada", e =>
+        {
+            e.ConfigureConsumer<CompraRegistradaConsumer>(context);
+        });
     });
 });
 

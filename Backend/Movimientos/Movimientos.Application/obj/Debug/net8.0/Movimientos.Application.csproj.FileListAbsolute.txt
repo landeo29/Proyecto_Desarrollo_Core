@@ -29,3 +29,5 @@ C:\NET\Backend\Movimientos\Movimientos.Application\obj\Debug\net8.0\Movimientos.
 C:\NET\Backend\Movimientos\Movimientos.Application\obj\Debug\net8.0\refint\Movimientos.Application.dll
 C:\NET\Backend\Movimientos\Movimientos.Application\obj\Debug\net8.0\Movimientos.Application.pdb
 C:\NET\Backend\Movimientos\Movimientos.Application\obj\Debug\net8.0\ref\Movimientos.Application.dll
+C:\NET\Backend\Movimientos\Movimientos.Application\bin\Debug\net8.0\Shared.Contracts.dll
+C:\NET\Backend\Movimientos\Movimientos.Application\bin\Debug\net8.0\Shared.Contracts.pdb
