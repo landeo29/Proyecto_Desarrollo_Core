@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Movimientos.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffd557cf370f39ad56b6ab01a336d02e52d625a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ea95fe3f8f84f5bb546c5cbd192409e385fb31d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Movimientos.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Movimientos.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
