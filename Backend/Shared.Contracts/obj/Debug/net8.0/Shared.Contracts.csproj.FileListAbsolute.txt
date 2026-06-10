@@ -9,3 +9,15 @@ C:\NET\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.dll
 C:\NET\Shared.Contracts\obj\Debug\net8.0\refint\Shared.Contracts.dll
 C:\NET\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.pdb
 C:\NET\Shared.Contracts\obj\Debug\net8.0\ref\Shared.Contracts.dll
+C:\NET\Backend\Shared.Contracts\bin\Debug\net8.0\Shared.Contracts.deps.json
+C:\NET\Backend\Shared.Contracts\bin\Debug\net8.0\Shared.Contracts.dll
+C:\NET\Backend\Shared.Contracts\bin\Debug\net8.0\Shared.Contracts.pdb
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.AssemblyInfoInputs.cache
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.AssemblyInfo.cs
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.csproj.CoreCompileInputs.cache
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.sourcelink.json
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.dll
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\refint\Shared.Contracts.dll
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\Shared.Contracts.pdb
+C:\NET\Backend\Shared.Contracts\obj\Debug\net8.0\ref\Shared.Contracts.dll

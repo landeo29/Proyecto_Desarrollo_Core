@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+0xtFJeX+Bk=",
+  "dgSpecHash": "COhnMkGBBm8=",
   "success": true,
-  "projectFilePath": "C:\\NET\\Shared.Contracts\\Shared.Contracts.csproj",
+  "projectFilePath": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

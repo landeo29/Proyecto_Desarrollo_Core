@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r0hBWfydHZc=",
+  "dgSpecHash": "vdW8+CIg5Rk=",
   "success": true,
-  "projectFilePath": "C:\\NET\\Movimientos\\Movimientos.API\\Movimientos.API.csproj",
+  "projectFilePath": "C:\\NET\\Backend\\Movimientos\\Movimientos.API\\Movimientos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josla\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\josla\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

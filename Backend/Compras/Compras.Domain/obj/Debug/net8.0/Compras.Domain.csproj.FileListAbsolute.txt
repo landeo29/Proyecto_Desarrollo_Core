@@ -9,3 +9,15 @@ C:\NET\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.dll
 C:\NET\Compras\Compras.Domain\obj\Debug\net8.0\refint\Compras.Domain.dll
 C:\NET\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.pdb
 C:\NET\Compras\Compras.Domain\obj\Debug\net8.0\ref\Compras.Domain.dll
+C:\NET\Backend\Compras\Compras.Domain\bin\Debug\net8.0\Compras.Domain.deps.json
+C:\NET\Backend\Compras\Compras.Domain\bin\Debug\net8.0\Compras.Domain.dll
+C:\NET\Backend\Compras\Compras.Domain\bin\Debug\net8.0\Compras.Domain.pdb
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.AssemblyInfoInputs.cache
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.AssemblyInfo.cs
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.csproj.CoreCompileInputs.cache
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.sourcelink.json
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.dll
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\refint\Compras.Domain.dll
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\Compras.Domain.pdb
+C:\NET\Backend\Compras\Compras.Domain\obj\Debug\net8.0\ref\Compras.Domain.dll

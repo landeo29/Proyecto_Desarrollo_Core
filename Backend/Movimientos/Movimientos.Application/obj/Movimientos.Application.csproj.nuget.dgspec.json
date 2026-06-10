@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NET\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj": {}
+    "C:\\NET\\Backend\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj": {}
   },
   "projects": {
-    "C:\\NET\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj": {
+    "C:\\NET\\Backend\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NET\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj",
+        "projectUniqueName": "C:\\NET\\Backend\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj",
         "projectName": "Movimientos.Application",
-        "projectPath": "C:\\NET\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj",
+        "projectPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Application\\Movimientos.Application.csproj",
         "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
-        "outputPath": "C:\\NET\\Movimientos\\Movimientos.Application\\obj\\",
+        "outputPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\NET\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj": {
-                "projectPath": "C:\\NET\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj"
+              "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj": {
+                "projectPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\NET\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj": {
+    "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NET\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj",
+        "projectUniqueName": "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj",
         "projectName": "Movimientos.Domain",
-        "projectPath": "C:\\NET\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj",
+        "projectPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\Movimientos.Domain.csproj",
         "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
-        "outputPath": "C:\\NET\\Movimientos\\Movimientos.Domain\\obj\\",
+        "outputPath": "C:\\NET\\Backend\\Movimientos\\Movimientos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",

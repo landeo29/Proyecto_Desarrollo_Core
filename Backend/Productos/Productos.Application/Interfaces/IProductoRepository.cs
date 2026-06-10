@@ -8,4 +8,5 @@ public interface IProductoRepository
     Task<Producto?> ObtenerPorIdAsync(int id);
     Task<Producto> RegistrarAsync(Producto producto);
     Task<bool> ActualizarAsync(Producto producto);
+    Task ActualizarCostoYPrecioAsync(int idProducto, decimal costo);
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj": {}
+    "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj": {}
   },
   "projects": {
-    "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj": {
+    "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj",
+        "projectUniqueName": "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj",
         "projectName": "Productos.Domain",
-        "projectPath": "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj",
+        "projectPath": "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj",
         "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
-        "outputPath": "C:\\NET\\Productos\\Productos.Domain\\obj\\",
+        "outputPath": "C:\\NET\\Backend\\Productos\\Productos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",

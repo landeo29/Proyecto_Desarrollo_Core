@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NET\\Productos\\Productos.Application\\Productos.Application.csproj": {}
+    "C:\\NET\\Backend\\Productos\\Productos.Application\\Productos.Application.csproj": {}
   },
   "projects": {
-    "C:\\NET\\Productos\\Productos.Application\\Productos.Application.csproj": {
+    "C:\\NET\\Backend\\Productos\\Productos.Application\\Productos.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NET\\Productos\\Productos.Application\\Productos.Application.csproj",
+        "projectUniqueName": "C:\\NET\\Backend\\Productos\\Productos.Application\\Productos.Application.csproj",
         "projectName": "Productos.Application",
-        "projectPath": "C:\\NET\\Productos\\Productos.Application\\Productos.Application.csproj",
+        "projectPath": "C:\\NET\\Backend\\Productos\\Productos.Application\\Productos.Application.csproj",
         "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
-        "outputPath": "C:\\NET\\Productos\\Productos.Application\\obj\\",
+        "outputPath": "C:\\NET\\Backend\\Productos\\Productos.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,10 +28,79 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj": {
-                "projectPath": "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj"
+              "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj": {
+                "projectPath": "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj"
+              },
+              "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj": {
+                "projectPath": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj"
               }
             }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.422/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj",
+        "projectName": "Productos.Domain",
+        "projectPath": "C:\\NET\\Backend\\Productos\\Productos.Domain\\Productos.Domain.csproj",
+        "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
+        "outputPath": "C:\\NET\\Backend\\Productos\\Productos.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -68,14 +137,14 @@
         }
       }
     },
-    "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj": {
+    "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj",
-        "projectName": "Productos.Domain",
-        "projectPath": "C:\\NET\\Productos\\Productos.Domain\\Productos.Domain.csproj",
+        "projectUniqueName": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj",
+        "projectName": "Shared.Contracts",
+        "projectPath": "C:\\NET\\Backend\\Shared.Contracts\\Shared.Contracts.csproj",
         "packagesPath": "C:\\Users\\josla\\.nuget\\packages\\",
-        "outputPath": "C:\\NET\\Productos\\Productos.Domain\\obj\\",
+        "outputPath": "C:\\NET\\Backend\\Shared.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\josla\\AppData\\Roaming\\NuGet\\NuGet.Config",

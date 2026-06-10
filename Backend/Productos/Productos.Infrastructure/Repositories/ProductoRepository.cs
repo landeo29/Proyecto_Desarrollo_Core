@@ -33,4 +33,14 @@ public class ProductoRepository : IProductoRepository
         _context.Productos.Update(producto);
         return await _context.SaveChangesAsync() > 0;
     }
+    
+    public async Task ActualizarCostoYPrecioAsync(int idProducto, decimal costo)
+    {
+        var producto = await _context.Productos.FindAsync(idProducto);
+        if (producto is null) return;
+
+        producto.Costo = costo;
+        producto.PrecioVenta = costo * 1.35m;   // regla de precioventa
+        await _context.SaveChangesAsync();
+    }
 }

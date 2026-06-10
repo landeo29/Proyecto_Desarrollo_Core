@@ -1,8 +1,10 @@
 using System.Text;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Productos.Application.Consumers;
 using Productos.Application.Interfaces;
 using Productos.Application.Services;
 using Productos.Infrastructure.Persistence;
@@ -69,6 +71,21 @@ builder.Services.AddSwaggerGen(c =>
             },
             Array.Empty<string>()
         }
+    });
+});
+
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<CompraRegistradaConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+        cfg.ConfigureEndpoints(context);
     });
 });
 
