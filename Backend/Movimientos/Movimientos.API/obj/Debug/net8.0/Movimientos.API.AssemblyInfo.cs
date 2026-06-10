@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Movimientos.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76f74313bfaf313dc023a37e16b401558c07db7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d266dd39897785f3b73a031378938a690b363157")]
 [assembly: System.Reflection.AssemblyProductAttribute("Movimientos.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Movimientos.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
