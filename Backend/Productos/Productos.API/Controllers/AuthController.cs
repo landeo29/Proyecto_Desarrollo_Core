@@ -7,17 +7,25 @@ namespace Productos.API.Controllers;
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
+    private readonly IUsuarioRepository _usuarioRepository;
     private readonly ITokenService _tokenService;
 
-    public AuthController(ITokenService tokenService) => _tokenService = tokenService;
+    public AuthController(IUsuarioRepository usuarioRepository, ITokenService tokenService)
+    {
+        _usuarioRepository = usuarioRepository;
+        _tokenService = tokenService;
+    }
 
     [HttpPost("login")]
-    public IActionResult Login([FromBody] LoginRequest request)
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
-        if (request.Usuario == "admin" && request.Password == "123456")
-            return Ok(new { token = _tokenService.GenerarToken(request.Usuario) });
+        var usuario = await _usuarioRepository.ObtenerPorNombreAsync(request.Usuario);
 
-        return Unauthorized(new { mensaje = "Credenciales inválidas" });
+        if (usuario is null || !BCrypt.Net.BCrypt.Verify(request.Password, usuario.PasswordHash))
+            return Unauthorized(new { mensaje = "Credenciales inválidas" });
+
+        var token = _tokenService.GenerarToken(usuario.NombreUsuario);
+        return Ok(new { token });
     }
 }
 

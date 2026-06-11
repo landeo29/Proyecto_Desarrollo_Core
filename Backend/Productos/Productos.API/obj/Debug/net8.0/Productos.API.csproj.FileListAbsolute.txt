@@ -455,3 +455,4 @@ C:\NET\Backend\Productos\Productos.API\obj\Debug\net8.0\refint\Productos.API.dll
 C:\NET\Backend\Productos\Productos.API\obj\Debug\net8.0\Productos.API.pdb
 C:\NET\Backend\Productos\Productos.API\obj\Debug\net8.0\Productos.API.genruntimeconfig.cache
 C:\NET\Backend\Productos\Productos.API\obj\Debug\net8.0\ref\Productos.API.dll
+C:\NET\Backend\Productos\Productos.API\bin\Debug\net8.0\BCrypt.Net-Next.dll

@@ -4,8 +4,8 @@ import { Package, Zap, ShieldCheck, RefreshCw, User, Lock } from "lucide-react";
 import apiClient from "../api/apiClient";
 
 function Login() {
-    const [usuario, setUsuario] = useState("admin");
-    const [password, setPassword] = useState("123456");
+    const [usuario, setUsuario] = useState("");
+    const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [cargando, setCargando] = useState(false);
     const navigate = useNavigate();

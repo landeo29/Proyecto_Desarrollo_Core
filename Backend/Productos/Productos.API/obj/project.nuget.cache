@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p33d06cVqhA=",
+  "dgSpecHash": "YS0BEzt9H0o=",
   "success": true,
   "projectFilePath": "C:\\NET\\Backend\\Productos\\Productos.API\\Productos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josla\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\josla\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\josla\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\josla\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\josla\\.nuget\\packages\\masstransit\\8.3.0\\masstransit.8.3.0.nupkg.sha512",
     "C:\\Users\\josla\\.nuget\\packages\\masstransit.abstractions\\8.3.0\\masstransit.abstractions.8.3.0.nupkg.sha512",
