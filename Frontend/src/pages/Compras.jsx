@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Plus, Trash2, PackagePlus, ShoppingCart } from "lucide-react";
+import toast from "react-hot-toast";
 import productoService from "../api/productoService";
 import compraService from "../api/compraService";
 import Modal from "../components/Modal";
@@ -9,7 +11,6 @@ function Compras() {
     const [idProducto, setIdProducto] = useState("");
     const [cantidad, setCantidad] = useState(1);
     const [precio, setPrecio] = useState(0);
-    const [mensaje, setMensaje] = useState("");
     const [modalAbierto, setModalAbierto] = useState(false);
 
     const [nuevoNombre, setNuevoNombre] = useState("");
@@ -22,12 +23,20 @@ function Compras() {
     };
 
     useEffect(() => {
-        cargarProductos();
+        let activo = true;
+        productoService.listar().then((data) => {
+            if (activo) {
+                setProductos(data);
+            }
+        });
+        return () => {
+            activo = false;
+        };
     }, []);
 
     const agregarDetalle = () => {
         if (!idProducto) {
-            setMensaje("Selecciona un producto");
+            toast.error("Selecciona un producto");
             return;
         }
         const prod = productos.find((p) => p.idProducto === parseInt(idProducto));
@@ -43,12 +52,10 @@ function Compras() {
         setIdProducto("");
         setCantidad(1);
         setPrecio(0);
-        setMensaje("");
     };
 
-    const quitarDetalle = (index) => {
+    const quitarDetalle = (index) =>
         setDetalles(detalles.filter((_, i) => i !== index));
-    };
 
     const totalCompra = detalles.reduce(
         (acc, d) => acc + d.cantidad * d.precio,
@@ -57,7 +64,7 @@ function Compras() {
 
     const registrarCompra = async () => {
         if (detalles.length === 0) {
-            setMensaje("Agrega al menos un producto");
+            toast.error("Agrega al menos un producto");
             return;
         }
         try {
@@ -68,10 +75,10 @@ function Compras() {
                     precio: d.precio,
                 })),
             });
-            setMensaje("Compra registrada correctamente");
+            toast.success("Compra registrada correctamente");
             setDetalles([]);
         } catch {
-            setMensaje("Error al registrar la compra");
+            toast.error("Error al registrar la compra");
         }
     };
 
@@ -88,156 +95,119 @@ function Compras() {
             setNuevoLote("");
             setNuevoCosto(0);
             await cargarProductos();
-            setMensaje("Producto creado");
+            toast.success("Producto creado");
         } catch {
-            setMensaje("Error al crear el producto");
+            toast.error("Error al crear el producto");
         }
     };
 
-    return (
-        <div className="max-w-4xl mx-auto p-6">
-            <h1 className="text-2xl font-bold text-gray-800 mb-6">Registrar Compra</h1>
+    const inputDark =
+        "bg-white/[0.03] border border-white/10 text-white rounded-xl px-3 py-2.5 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 transition placeholder-gray-600";
 
-            <div className="bg-white rounded-xl shadow p-4 mb-6">
+    return (
+        <div className="max-w-5xl mx-auto p-8">
+            <div className="flex items-center gap-3 mb-8">
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10">
+                    <ShoppingCart className="w-5 h-5 text-violet-400" strokeWidth={1.5} />
+                </div>
+                <div>
+                    <h1 className="text-2xl font-bold text-white">Registrar Compra</h1>
+                    <p className="text-gray-500 text-sm">Agrega productos y registra el ingreso de stock</p>
+                </div>
+            </div>
+
+            <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 mb-6 backdrop-blur-sm">
                 <div className="flex gap-3 items-end flex-wrap">
                     <div className="flex-1 min-w-40">
-                        <label className="block text-sm text-gray-600 mb-1">Producto</label>
+                        <label className="block text-sm text-gray-400 mb-1.5">Producto</label>
                         <select
                             value={idProducto}
                             onChange={(e) => setIdProducto(e.target.value)}
-                            className="w-full border border-gray-300 rounded-lg px-3 py-2"
+                            className={`w-full ${inputDark}`}
                         >
-                            <option value="">-- Selecciona --</option>
+                            <option value="" className="bg-[#0b0b12]">-- Selecciona --</option>
                             {productos.map((p) => (
-                                <option key={p.idProducto} value={p.idProducto}>
+                                <option key={p.idProducto} value={p.idProducto} className="bg-[#0b0b12]">
                                     {p.nombreProducto}
                                 </option>
                             ))}
                         </select>
                     </div>
                     <div className="w-24">
-                        <label className="block text-sm text-gray-600 mb-1">Cantidad</label>
-                        <input
-                            type="number"
-                            min="1"
-                            value={cantidad}
-                            onChange={(e) => setCantidad(e.target.value)}
-                            className="w-full border border-gray-300 rounded-lg px-3 py-2"
-                        />
+                        <label className="block text-sm text-gray-400 mb-1.5">Cantidad</label>
+                        <input type="number" min="1" value={cantidad}
+                               onChange={(e) => setCantidad(e.target.value)} className={`w-full ${inputDark}`} />
                     </div>
                     <div className="w-28">
-                        <label className="block text-sm text-gray-600 mb-1">Costo</label>
-                        <input
-                            type="number"
-                            min="0"
-                            step="0.01"
-                            value={precio}
-                            onChange={(e) => setPrecio(e.target.value)}
-                            className="w-full border border-gray-300 rounded-lg px-3 py-2"
-                        />
+                        <label className="block text-sm text-gray-400 mb-1.5">Costo</label>
+                        <input type="number" min="0" step="0.01" value={precio}
+                               onChange={(e) => setPrecio(e.target.value)} className={`w-full ${inputDark}`} />
                     </div>
-                    <button
-                        onClick={agregarDetalle}
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-                    >
-                        Agregar
+                    <button onClick={agregarDetalle}
+                            className="flex items-center gap-2 bg-white/[0.06] border border-white/10 text-white px-4 py-2.5 rounded-xl hover:bg-white/[0.1] transition">
+                        <Plus className="w-4 h-4" strokeWidth={2} /> Agregar
                     </button>
-                    <button
-                        onClick={() => setModalAbierto(true)}
-                        className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
-                    >
-                        + Producto
+                    <button onClick={() => setModalAbierto(true)}
+                            className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-4 py-2.5 rounded-xl hover:-translate-y-0.5 transition-all shadow-lg shadow-violet-700/30">
+                        <PackagePlus className="w-4 h-4" strokeWidth={2} /> Producto
                     </button>
                 </div>
             </div>
 
-            <table className="w-full bg-white rounded-xl shadow overflow-hidden mb-4">
-                <thead className="bg-gray-100">
-                <tr>
-                    <th className="text-left px-4 py-2 text-sm text-gray-600">Producto</th>
-                    <th className="text-right px-4 py-2 text-sm text-gray-600">Cantidad</th>
-                    <th className="text-right px-4 py-2 text-sm text-gray-600">Costo</th>
-                    <th className="text-right px-4 py-2 text-sm text-gray-600">Subtotal</th>
-                    <th className="px-4 py-2"></th>
-                </tr>
-                </thead>
-                <tbody>
-                {detalles.length === 0 ? (
-                    <tr>
-                        <td colSpan="5" className="text-center text-gray-400 py-4">
-                            Sin productos agregados
-                        </td>
+            <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden mb-6">
+                <table className="w-full">
+                    <thead>
+                    <tr className="border-b border-white/[0.08]">
+                        <th className="text-left px-5 py-3 text-xs uppercase tracking-wider text-gray-500">Producto</th>
+                        <th className="text-right px-5 py-3 text-xs uppercase tracking-wider text-gray-500">Cantidad</th>
+                        <th className="text-right px-5 py-3 text-xs uppercase tracking-wider text-gray-500">Costo</th>
+                        <th className="text-right px-5 py-3 text-xs uppercase tracking-wider text-gray-500">Subtotal</th>
+                        <th className="px-5 py-3"></th>
                     </tr>
-                ) : (
-                    detalles.map((d, i) => (
-                        <tr key={i} className="border-t">
-                            <td className="px-4 py-2">{d.nombre}</td>
-                            <td className="text-right px-4 py-2">{d.cantidad}</td>
-                            <td className="text-right px-4 py-2">{d.precio.toFixed(2)}</td>
-                            <td className="text-right px-4 py-2">
-                                {(d.cantidad * d.precio).toFixed(2)}
-                            </td>
-                            <td className="text-center px-4 py-2">
-                                <button
-                                    onClick={() => quitarDetalle(i)}
-                                    className="text-red-500 hover:text-red-700"
-                                >
-                                    Quitar
-                                </button>
-                            </td>
-                        </tr>
-                    ))
-                )}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    {detalles.length === 0 ? (
+                        <tr><td colSpan="5" className="text-center text-gray-600 py-8">Sin productos agregados</td></tr>
+                    ) : (
+                        detalles.map((d, i) => (
+                            <tr key={i} className="border-b border-white/[0.04] hover:bg-white/[0.02] transition">
+                                <td className="px-5 py-3 text-gray-200">{d.nombre}</td>
+                                <td className="text-right px-5 py-3 text-gray-300">{d.cantidad}</td>
+                                <td className="text-right px-5 py-3 text-gray-300">{d.precio.toFixed(2)}</td>
+                                <td className="text-right px-5 py-3 text-white font-medium">{(d.cantidad * d.precio).toFixed(2)}</td>
+                                <td className="text-center px-5 py-3">
+                                    <button onClick={() => quitarDetalle(i)} className="text-gray-500 hover:text-red-400 transition">
+                                        <Trash2 className="w-4 h-4" strokeWidth={1.5} />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))
+                    )}
+                    </tbody>
+                </table>
+            </div>
 
-            <div className="flex justify-between items-center bg-white rounded-xl shadow p-4">
-        <span className="text-lg font-bold text-gray-800">
-          Total: S/ {totalCompra.toFixed(2)}
-        </span>
-                <button
-                    onClick={registrarCompra}
-                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                >
+            <div className="flex justify-between items-center bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5">
+                <div>
+                    <span className="text-gray-500 text-sm">Total de la compra</span>
+                    <p className="text-2xl font-bold text-white">S/ {totalCompra.toFixed(2)}</p>
+                </div>
+                <button onClick={registrarCompra}
+                        className="shine-btn bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-medium hover:-translate-y-0.5 transition-all shadow-lg shadow-violet-700/30">
                     Registrar Compra
                 </button>
             </div>
 
-            {mensaje && (
-                <p className="mt-4 text-center font-medium text-gray-700">{mensaje}</p>
-            )}
-
-            <Modal
-                abierto={modalAbierto}
-                onCerrar={() => setModalAbierto(false)}
-                titulo="Nuevo Producto"
-            >
+            <Modal abierto={modalAbierto} onCerrar={() => setModalAbierto(false)} titulo="Nuevo Producto">
                 <div className="space-y-3">
-                    <input
-                        type="text"
-                        placeholder="Nombre del producto"
-                        value={nuevoNombre}
-                        onChange={(e) => setNuevoNombre(e.target.value)}
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Número de lote"
-                        value={nuevoLote}
-                        onChange={(e) => setNuevoLote(e.target.value)}
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2"
-                    />
-                    <input
-                        type="number"
-                        placeholder="Costo"
-                        value={nuevoCosto}
-                        onChange={(e) => setNuevoCosto(e.target.value)}
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2"
-                    />
-                    <button
-                        onClick={crearProducto}
-                        className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700"
-                    >
+                    <input type="text" placeholder="Nombre del producto" value={nuevoNombre}
+                           onChange={(e) => setNuevoNombre(e.target.value)} className={`w-full ${inputDark}`} />
+                    <input type="text" placeholder="Número de lote" value={nuevoLote}
+                           onChange={(e) => setNuevoLote(e.target.value)} className={`w-full ${inputDark}`} />
+                    <input type="number" placeholder="Costo" value={nuevoCosto}
+                           onChange={(e) => setNuevoCosto(e.target.value)} className={`w-full ${inputDark}`} />
+                    <button onClick={crearProducto}
+                            className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white py-2.5 rounded-xl font-medium hover:-translate-y-0.5 transition-all shadow-lg shadow-violet-700/30">
                         Crear Producto
                     </button>
                 </div>
